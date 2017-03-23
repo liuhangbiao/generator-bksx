@@ -1,6 +1,6 @@
 {
   "name": "generator-bksx",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "北控三兴web前端生成器",
   "main": "index.js",
   "scripts": {
@@ -24,11 +24,10 @@
   },
   "homepage": "https://github.com/YealZoy/generator-bksx#readme",
   "dependencies": {
-    "yeoman-generator": "^1.1.1"
-  },
-  "devDependencies": {
+    "yeoman-generator": "^1.1.1",
     "yosay": "^2.0.0",
     "chalk": "^1.1.3"
-    
+  },
+  "devDependencies": {
   }
 }
