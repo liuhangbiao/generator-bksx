@@ -1,0 +1,33 @@
+{
+  "name": "generator-bksx",
+  "version": "1.0.0",
+  "description": "北控三兴web前端生成器",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "app",
+    "ie8"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YealZoy/generator-bksx.git"
+  },
+  "author": "郑玉燕",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YealZoy/generator-bksx/issues"
+  },
+  "homepage": "https://github.com/YealZoy/generator-bksx#readme",
+  "dependencies": {
+    "yeoman-generator": "^1.1.1"
+  },
+  "devDependencies": {
+    "chalk": "^1.1.3",
+    "yosay": "^2.0.0"
+  }
+}
