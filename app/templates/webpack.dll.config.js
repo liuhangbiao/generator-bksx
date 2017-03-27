@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin'); // 与业务代码共用同一份路径的配置表
+const ExtractTextPlugin = require('extract-text-webpack-plugin'); 
 const output = path.resolve(__dirname,'./app/dll/manifest.json');
 function postcss() {
   var precss = require('precss');
@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname,'./app/dll'),
     filename: '[name].js',
-    library: '[name]', // 当前Dll的所有内容都会存放在这个参数指定变量名的一个全局变量下，注意与DllPlugin的name参数保持一致
+    library: '[name]', 
   },
   entry: require('./otherLib.js'),
   plugins: [

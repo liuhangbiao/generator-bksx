@@ -1,3 +1,14 @@
 module.exports = {
-	dll:['jquery','bootstrapjs','bootstrapcss','bootstrapfontEot','bootstrapfontSvg','bootstrapfontTtf','bootstrapfontWof','bootstrapfontWof2']
+	dll:[
+			'jquery',
+			'bootstrapjs',
+			'bootstrapcss',
+			'paginationcss',
+			'bootstrapfontEot',
+			'bootstrapfontSvg',
+			'bootstrapfontTtf',
+			'bootstrapfontWof',
+			'bootstrapfontWof2'
+		]
+
 }
