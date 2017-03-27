@@ -1,6 +1,6 @@
 {
   "name": "generator-bksx",
-  "version": "1.0.73",
+  "version": "1.0.75",
   "description": "北控三兴web前端生成器",
   "main": "index.js",
   "scripts": {
