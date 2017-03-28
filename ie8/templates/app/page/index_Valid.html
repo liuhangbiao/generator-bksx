@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paginationjs example</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+    <link rel="stylesheet" type="text/css" href="../../lib/css/pagination.css"/>
+    <link rel="stylesheet" type="text/css" href="../../lib/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="../../lib/css/formValidation.css"/>
+    <script type="text/javascript" src="../../lib/script/html5shiv.min.js"></script>
+    <script type="text/javascript" src="../../lib/script/respond.min.js"></script>
+</head>
+<body>
+<div style="width: 60%">
+    <form id="defaultForm" method="post" class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">电子邮箱</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="email" id="email" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">firstName</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="firstName" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">lastName</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="lastName" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">login</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="login" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">password</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="password" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-9 col-sm-offset-3">
+                <button type="submit" class="btn btn-primary" id="signup" value="Sign up">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="../../lib/script/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="../../lib/script/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../lib/script/bksxTool.min.js"></script>  
+<script type="text/javascript" src="../../lib/script/formValidation.js"></script>
+<script type="text/javascript" src="../../lib/script/bootsvalid.js"></script>
+<script>
+    $(function () {
+         $('#defaultForm').formValidation({
+            message: 'This value is not valid',
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: '电子邮件不能为空'
+                        },
+                        emailAddress: {
+                            message: '请输入有效的电子邮件地址'
+                        }
+                    }
+                }
+            }
+        })
+        .on('success.form.fv', function(e) {
+            var data1 = {
+                  "activated": true,
+                  "authorities": [
+                    "ROLE_USER"
+                  ],
+                  "createdBy": "system",
+                  "createdDate": "2017-03-10T03:11:22.262Z",
+                  "email": $('#email').val(),
+                  "firstName": $('#firstName').val(),
+                  "id": 0,
+                  "langKey": "zh-cn",
+                  "lastModifiedBy": "system1",
+                  "lastModifiedDate": "2017-03-10T03:11:22.262Z",
+                  "lastName": $('#lastName').val(),
+                  "login": $('#login').val(),
+                  "password": $('#password').val()
+            }
+            $.ajax({
+                url: '/api/users',
+                data: data1,
+                type: 'POST',
+                success: function(data,textStatus,jqXHR){
+                    alert('createUser chenggong');
+                    console.log(data);
+
+                }
+            });
+        });     
+    });
+</script>
+</body>
+</html>

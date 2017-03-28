@@ -1,4 +1,4 @@
 require('css/style.css');
 $(function(){
-	//敲代码
+	alert('我是第二个页面');
 });

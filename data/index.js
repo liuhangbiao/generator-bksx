@@ -20,5 +20,4 @@ module.exports = class extends Generator{
 	initializing(){
 		this.fs.append(this.destinationPath('app/pages/' + this.pagename + '/page.js'), content)
 	}
-	
 }

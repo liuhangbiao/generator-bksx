@@ -1,0 +1,10 @@
+bootstrap.css 是bootstrap依赖的样式
+formValidation.css 是验证插件依赖的样式
+pagination.css 是分页插件依赖的样式
+
+jquery-1.9.1.min.js 是jquery的js文件
+bootstrap.min.js 是bootstrap的js文件
+template_native.js 是分页模版的js文件
+tool.js 是分页和请求插件的js文件
+formValidation.js和bootsvalid.js 是验证插件的js文件
+html5shiv.min.js和respond.min.js 是bootstrap兼容ie8所需的js文件
