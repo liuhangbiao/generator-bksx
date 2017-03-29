@@ -133,4 +133,3 @@ gulp.task('watch',function(){
 	 
 });
 gulp.task('default',['image','css','html','fonts','script','serverBin','watch']);
-//gulp.task('default',['cheerio']);

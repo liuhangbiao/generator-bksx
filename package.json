@@ -1,6 +1,6 @@
 {
   "name": "generator-bksx",
-  "version": "1.0.75",
+  "version": "1.0.76",
   "description": "北控三兴web前端生成器",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,9 @@
   },
   "files": [
     "app",
-    "ie8"
+    "ie8",
+    "data",
+    "page"
   ],
   "keywords": [
     "yeoman-generator"
