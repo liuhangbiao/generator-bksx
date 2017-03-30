@@ -50,6 +50,18 @@ var template = require('template');
 	              			}
 	            		});
 	          		}
+                if(temp){
+                    var list = {data:data}
+                    var temp_child = $(temp).children('script');
+                    var $chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+                    var maxPos = $chars.length; 
+                    var randomId = '';
+                    for (i = 0; i < 6; i++) {  
+                        randomId += $chars.charAt(Math.floor(Math.random() * maxPos));  
+                    }
+                    temp_child.attr('id',randomId);
+                    $(temp).html(template(randomId,list));
+                }
 	        	}
 	        	fn.success(data,textStatus,jqXHR); 
 	      	}
