@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-	contentBase: path.resolve(__dirname, './bin/'),
+	contentBase: path.resolve(__dirname, './build/'),
   	compress: true,
   	port: 9000,
   	hot:true,
